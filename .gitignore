@@ -1,0 +1,76 @@
+# ====================================================================
+# AI Patient Risk Assessment System - Git Ignore Rules
+# ====================================================================
+
+# Large Machine Learning Models (>100MB blocked by GitHub)
+# Note: best_model.pkl is ~740MB and hosted via Cloud Storage / Model Hub
+backend/models/best_model.pkl
+
+# Keep lightweight metadata artifacts:
+!backend/models/feature_columns.pkl
+!backend/models/label_encoder.pkl
+
+# Large Raw Datasets (Data Warehouse Multiclass.csv is ~94MB)
+*.csv
+*.tsv
+*.parquet
+*.h5
+
+# Python virtual environments & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Cache
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Frontend dependencies & build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and Secret Files
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+backend/.env
+
+# IDE and Operating System
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+Desktop.ini
